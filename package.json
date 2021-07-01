@@ -1,0 +1,39 @@
+{
+  "name": "chrome_download_histrory",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "chrome-build": "cross-env TARGET=chrome gulp",
+    "build": "cross-env NODE_ENV=production npm run chrome-build",
+    "dev": "cross-env TARGET=chrome gulp watch",
+    "chrome-dist": "cross-env NODE_ENV=production cross-env TARGET=chrome gulp dist",
+    "dist": "npm run chrome-dist"
+  },
+  "author": "",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0",
+    "cross-env": "^7.0.3",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-if": "^3.0.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-load-plugins": "^2.0.7",
+    "gulp-merge-json": "^2.1.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-zip": "^5.1.0",
+    "merge-stream": "^2.0.0",
+    "preprocessify": "^1.0.1",
+    "sass": "^1.35.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "browserify": "^17.0.0"
+  }
+}
