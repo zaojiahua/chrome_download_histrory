@@ -30,7 +30,7 @@ ext.downloads.onChanged.addListener((downloadDelta) => {
             download_item['filename'] = downloadDelta.filename.current;
         } else if (downloadDelta.state && downloadDelta.state.current == 'complete') {
             request({
-			    url: 'http://127.0.0.1:5003/post/download-history',
+			    url: 'https://api.betaquantity.com/post/download-history',
 			    method: 'post',
 			    data: download_item
 			}).then((responseData) => {
