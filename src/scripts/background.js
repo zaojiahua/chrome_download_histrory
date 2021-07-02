@@ -17,7 +17,7 @@ var download_history = {}
 
 ext.downloads.onCreated.addListener((downloadItem) => {
     ext.tabs.getSelected(null, function(tab) {
-        download_history[downloadItem.id] = { 'referrer': tab.url, 'finalUrl': downloadItem.finalUrl }
+        download_history[downloadItem.id] = { 'referrer': tab.url || downloadItem.referrer, 'finalUrl': downloadItem.finalUrl }
     });
 })
 
